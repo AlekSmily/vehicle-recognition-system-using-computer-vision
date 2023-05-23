@@ -9,17 +9,15 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.Set;
 
 @SpringBootApplication
 @AllArgsConstructor
-public class DiplomaApplication implements ApplicationRunner {
+public class Main implements ApplicationRunner {
 	private final UserRepository userRepository;
 
 	public static void main(String[] args) {
-		SpringApplication.run(DiplomaApplication.class, args);
+		SpringApplication.run(Main.class, args);
 	}
 
 	@Override
