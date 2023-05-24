@@ -1,0 +1,29 @@
+spring:
+  jpa:
+    show-sql: true
+    open-in-view: false
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 20
+        jdbc.batch_size: 20
+        # id.new_generator_mappings: false
+
+  datasource:
+    # ImMemory
+    url: jdbc:h2:mem:db
+    #    tcp: jdbc:h2:tcp://localhost:9092/mem:db
+    # Absolute path
+    #    url: jdbc:h2:F:/projects/diploma/db/db
+    #    tcp: jdbc:h2:tcp://localhost:9092/F:/projects/diploma/db/db
+    # Relative path form current dir
+    #    url: jdbc:h2:./db/db
+    # Relative path from home
+    #    url: jdbc:h2:~/db
+    #    tcp: jdbc:h2:tcp://localhost:9092/~/db
+    username: admin
+    password:
+  h2.console.enabled: true
