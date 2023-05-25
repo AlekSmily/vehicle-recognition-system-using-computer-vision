@@ -31,6 +31,18 @@ spring:
     basePath: /api
     returnBodyOnCreate: true
 
+  security:
+    user:
+      name: user
+      password: password
+      roles: USER
+
+logging:
+  level:
+    root: WARN
+    com.example.diploma: DEBUG
+    org.springframework.security.web.FilterChainProxy: DEBUG
+
 #  jackson:
 #    visibility:
 #      field: any
