@@ -1,6 +1,8 @@
 package com.example.diploma.model;
 
-public enum TransportClass {
+import org.springframework.security.core.GrantedAuthority;
+
+public enum TransportClass implements GrantedAuthority {
     SEDAN,
     HATCHBACK,
     SUV,
@@ -18,5 +20,10 @@ public enum TransportClass {
     MUSCLE_CAR,
     MICROCAR,
     VINTAGE,
-    UNIDENTIFIED
+    UNIDENTIFIED;
+
+    @Override
+    public String getAuthority() {
+        return name();
+    }
 }
