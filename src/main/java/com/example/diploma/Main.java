@@ -20,7 +20,7 @@ public class Main implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-//        System.out.println(userRepository.findAll());
+        System.out.println(userRepository.findAll());
         System.out.println(userRepository.findByLastNameContainingIgnoreCase("last_name"));
         System.out.println(userRepository.findByEmailIgnoreCase("admin@gmail.com"));
         System.out.println(vehicleRepository.findByLicensePlate("АА5508ЕР"));
