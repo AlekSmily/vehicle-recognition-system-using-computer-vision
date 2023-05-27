@@ -11,9 +11,4 @@ public class ViewController {
     public String indexPage() {
         return "index";
     }
-
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String loginPage() {
-        return "login";
-    }
 }

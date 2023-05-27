@@ -51,8 +51,6 @@ public class WebSecurityConfig {
                 .requestMatchers("/api/**").hasRole(Role.ADMIN.name())
                 .requestMatchers("/").hasRole(Role.USER.name())
                 .and().formLogin()
-                .loginPage("/login")
-                .permitAll()
                 .defaultSuccessUrl("/");
         return http.build();
     }
