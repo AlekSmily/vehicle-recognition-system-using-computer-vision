@@ -22,7 +22,6 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         Map<String, Object> body = errorAttributes.getErrorAttributes(request, exception.getOptions());
         HttpStatusCode statusCode = exception.getStatusCode();
         HttpStatus status = HttpStatus.valueOf(statusCode.value());
-//        HttpStatus status = (HttpStatus) exception.getStatusCode();
         body.put("status", status.value());
         body.put("error", status.getReasonPhrase());
         return ResponseEntity.status(status).body(body);

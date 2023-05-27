@@ -21,6 +21,7 @@ spring:
   data.rest:
     basePath: /api
     returnBodyOnCreate: true
+    default-page-size: 20
 
 
 logging:
@@ -28,3 +29,9 @@ logging:
     root: WARN
     com.example.diploma: DEBUG
 #    org.springframework.security.web.FilterChainProxy: DEBUG
+
+server.servlet:
+  encoding:
+    charset: UTF-8
+    enabled: true
+    force: true

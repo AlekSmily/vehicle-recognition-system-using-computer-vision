@@ -1,4 +1,4 @@
-package com.example.diploma.web;
+package com.example.diploma.controller;
 
 import com.example.diploma.AuthUser;
 import com.example.diploma.model.Role;
@@ -19,7 +19,7 @@ import java.net.URI;
 import java.util.Set;
 
 @RestController
-@RequestMapping(value = "api/account")
+@RequestMapping("api/account")
 @Slf4j
 @AllArgsConstructor
 public class AccountController {
@@ -65,4 +65,9 @@ public class AccountController {
         userRepository.save(user);
     }
 
+//    @Override
+//    public RepositoryLinksResource process(RepositoryLinksResource model) {
+//        model.add(linkTo(AccountController.class).withRel("account"));
+//        return model;
+//    }
 }

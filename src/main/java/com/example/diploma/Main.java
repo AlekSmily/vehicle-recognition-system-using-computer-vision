@@ -1,7 +1,5 @@
 package com.example.diploma;
 
-import com.example.diploma.repository.UserRepository;
-import com.example.diploma.repository.VehicleRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -11,8 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @AllArgsConstructor
 public class Main implements ApplicationRunner {
-    private final UserRepository userRepository;
-    private final VehicleRepository vehicleRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
